@@ -183,14 +183,12 @@
         showLoadingIndicator();
         
         try {
-          // Send request to backend
-          const response = await fetch('https://cors-anywhere.herokuapp.com/https://aichatbotbackend-epfoyk2aq-besalius-projects.vercel.app/api/chat', {
+          const response = await fetch('https://aichatbotbackend-epfoyk2aq-besalius-projects.vercel.app/api/chat', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
             credentials: 'include',
-            mode: 'cors',
             body: JSON.stringify({ 
               messages: conversationHistory,
               sessionId: Date.now().toString()
